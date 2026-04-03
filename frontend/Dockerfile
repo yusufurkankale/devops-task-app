@@ -5,7 +5,7 @@ COPY package*.json ./
 RUN npm install
 COPY . .
 # Backend URL environment variable during build if needed
-ENV VITE_API_URL=http://localhost:5000
+ENV VITE_API_URL=http://3.67.85.96:5000
 RUN npm run build
 
 # Serve stage
