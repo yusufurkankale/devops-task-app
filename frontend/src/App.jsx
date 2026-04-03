@@ -8,7 +8,7 @@ function App() {
     // Vite üzerinden geliştirme ortamında proxy kullanılabilir, 
     // ancak container ortamında genelde environment variables veya doğrudan API adresi kullanılır.
     // Şimdilik backend API URL'sine istek atıyoruz.
-    const apiUrl = import.meta.env.VITE_API_URL || 'http://3.67.85.96:5000'
+    const apiUrl = import.meta.env.VITE_API_URL || '/api/'
 
     fetch(`${apiUrl}/api/status`)
       .then(res => res.json())
