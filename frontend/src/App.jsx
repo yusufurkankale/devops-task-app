@@ -5,10 +5,7 @@ function App() {
   const [status, setStatus] = useState('Backend bekleniyor...')
 
   useEffect(() => {
-    // Vite üzerinden geliştirme ortamında proxy kullanılabilir, 
-    // ancak container ortamında genelde environment variables veya doğrudan API adresi kullanılır.
-    // Şimdilik backend API URL'sine istek atıyoruz.
-    const apiUrl = import.meta.env.VITE_API_URL || '/api/'
+
 
     fetch(`${apiUrl}/api/status`)
       .then(res => res.json())
