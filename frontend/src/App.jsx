@@ -6,9 +6,11 @@ function App() {
 
   useEffect(() => {
 
-
-    fetch(`${apiUrl}/api/status`)
-      .then(res => res.json())
+    fetch('/api/status')
+      .then(res => {
+        if (!res.ok) throw new Error('Sunucu hatası: ' + res.status);
+        return res.json();
+      })
       .then(data => setStatus(data.message))
       .catch(err => setStatus('Backend\'e ulaşılamadı. ' + err.message))
   }, [])
