@@ -1,0 +1,10 @@
+# Terraform'un indirdiği devasa dosyalar
+terraform/.terraform/
+terraform/.terraform.lock.hcl
+
+# Terraform'un anlık durumunu tuttuğu dosyalar
+terraform/*.tfstate
+terraform/*.tfstate.backup
+
+# Güvenlik! SSH Anahtarları asla GitHub'a gitmemeli
+*.pem
